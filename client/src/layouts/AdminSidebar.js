@@ -1,7 +1,7 @@
 import React from "react";
 import * as Icon from 'react-feather';
 
-const AdminSideBar = () => {
+const AdminSideBar = ({showSideNav = true}) => {
 
     return (
         <div id="layoutSidenav">

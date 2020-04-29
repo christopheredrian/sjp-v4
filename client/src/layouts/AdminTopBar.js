@@ -1,42 +1,50 @@
 import React from "react";
+import * as Icon from 'react-feather';
 
-const AdminTopBar = () => {
+const AdminTopBar = ({toggleShowSidebar}) => {
 
 
     return (
         <nav className="topnav navbar navbar-expand shadow navbar-light bg-white" id="sidenavAccordion">
             <a className="navbar-brand d-none d-sm-block" href="index.html">SJP-V4</a>
-            <button className="btn btn-icon btn-transparent-dark order-1 order-lg-0 mr-lg-2" id="sidebarToggle"
-                    href="#"><i data-feather="menu"/></button>
-            <form className="form-inline mr-auto d-none d-lg-block"><input
-                className="form-control form-control-solid mr-sm-2" type="search" placeholder="Search"
-                aria-label="Search"/></form>
+            <button
+                className="btn btn-icon btn-transparent-dark order-1 order-lg-0 mr-lg-2"
+                id="sidebarToggle"
+                href="#"
+                onClick={toggleShowSidebar}
+            >
+                <Icon.Menu/>
+            </button>
+            <form className="form-inline mr-auto d-none d-lg-block">
+                <input className="form-control form-control-solid mr-sm-2" type="search" placeholder="Search"
+                       aria-label="Search"/>
+            </form>
             <ul className="navbar-nav align-items-center ml-auto">
                 <li className="nav-item dropdown no-caret mr-3">
-                    <a className="nav-link dropdown-toggle" id="navbarDropdownDocs" href="javascript:void(0);"
+                    <a className="nav-link dropdown-toggle" id="navbarDropdownDocs" href="#"
                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div className="d-inline d-md-none font-weight-500">Docs</div>
                         <div className="d-none d-md-inline font-weight-500">Documentation</div>
                         <i className="fas fa-chevron-right dropdown-arrow"/>
                     </a>
-                    <div className="dropdown-menu dropdown-menu-right py-0 o-hidden mr-n15 mr-lg-0 animated--fade-in-up"
-                         aria-labelledby="navbarDropdownDocs">
+                    <div
+                        className="dropdown-menu dropdown-menu-right py-0 o-hidden mr-n15 mr-lg-0 animated--fade-in-up"
+                        aria-labelledby="navbarDropdownDocs"
+                    >
                         <a className="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro"
-                           target="_blank"
-                        >
+                           target="_blank">
                             <div className="icon-stack bg-primary-soft text-primary mr-4"><i data-feather="book"/>
                             </div>
                             <div>
                                 <div className="small text-gray-500">Documentation</div>
                                 Usage instructions and reference
                             </div>
-                        </a
-                        >
+                        </a>
                         <div className="dropdown-divider m-0"/>
                         <a className="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro/components"
                            target="_blank">
                             <div className="icon-stack bg-primary-soft text-primary mr-4">
-                                <i data-feather="code"/>
+                                <Icon.Code/>
                             </div>
                             <div>
                                 <div className="small text-gray-500">Components</div>
@@ -47,8 +55,9 @@ const AdminTopBar = () => {
                         <a className="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro/changelog"
                            target="_blank"
                         >
-                            <div className="icon-stack bg-primary-soft text-primary mr-4"><i
-                                data-feather="file-text"/></div>
+                            <div className="icon-stack bg-primary-soft text-primary mr-4">
+                                <Icon.FileText/>
+                            </div>
                             <div>
                                 <div className="small text-gray-500">Changelog</div>
                                 Updates and changes
@@ -60,14 +69,15 @@ const AdminTopBar = () => {
                 <li className="nav-item dropdown no-caret mr-3 dropdown-notifications">
                     <a className="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownAlerts"
                        href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true"
-                       aria-expanded="false"><i data-feather="bell"/></a>
+                       aria-expanded="false">
+                        <Icon.Bell/>
+                    </a>
                     <div className="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up"
                          aria-labelledby="navbarDropdownAlerts">
-                        <h6 className="dropdown-header dropdown-notifications-header"><i className="mr-2"
-                                                                                         data-feather="bell"/>Alerts
-                            Center</h6>
-                        <a className="dropdown-item dropdown-notifications-item" href="#!"
-                        >
+                        <h6 className="dropdown-header dropdown-notifications-header">
+                            <Icon.Bell className={'pr-3'}/> Alerts Center
+                        </h6>
+                        <a className="dropdown-item dropdown-notifications-item" href="#!">
                             <div className="dropdown-notifications-item-icon bg-warning"><i data-feather="activity"/>
                             </div>
                             <div className="dropdown-notifications-item-content">
@@ -76,19 +86,18 @@ const AdminTopBar = () => {
                                     nothing serious, but it requires your attention.
                                 </div>
                             </div>
-                        </a
-                        ><a className="dropdown-item dropdown-notifications-item" href="#!"
-                    >
-                        <div className="dropdown-notifications-item-icon bg-info"><i data-feather="bar-chart"/></div>
-                        <div className="dropdown-notifications-item-content">
-                            <div className="dropdown-notifications-item-content-details">December 22, 2019</div>
-                            <div className="dropdown-notifications-item-content-text">A new monthly report is ready.
-                                Click here to view!
+                        </a>
+                        <a className="dropdown-item dropdown-notifications-item" href="#!">
+                            <div className="dropdown-notifications-item-icon bg-info">
+                                <Icon.BarChart/>
                             </div>
-                        </div>
-                    </a
-                    ><a className="dropdown-item dropdown-notifications-item" href="#!"
-                    >
+                            <div className="dropdown-notifications-item-content">
+                                <div className="dropdown-notifications-item-content-details">December 22, 2019</div>
+                                <div className="dropdown-notifications-item-content-text">A new monthly report is ready.
+                                    Click here to view!
+                                </div>
+                            </div>
+                        </a><a className="dropdown-item dropdown-notifications-item" href="#!">
                         <div className="dropdown-notifications-item-icon bg-danger"><i
                             className="fas fa-exclamation-triangle"/></div>
                         <div className="dropdown-notifications-item-content">
@@ -115,7 +124,9 @@ const AdminTopBar = () => {
                 <li className="nav-item dropdown no-caret mr-3 dropdown-notifications">
                     <a className="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownMessages"
                        href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true"
-                       aria-expanded="false"><i data-feather="mail"/></a>
+                       aria-expanded="false">
+                        <Icon.Mail/>
+                    </a>
                     <div className="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up"
                          aria-labelledby="navbarDropdownMessages">
                         <h6 className="dropdown-header dropdown-notifications-header"><i className="mr-2"
