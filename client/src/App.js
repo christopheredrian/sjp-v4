@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
+import AdminApp from "./layouts/AdminApp";
 
 const App = () => {
 
@@ -26,10 +27,7 @@ const App = () => {
 
     return (
         <div className="App">
-            <button onClick={() => fetchMessage()}>Fetch Message</button>
-            <p>
-                {message}
-            </p>
+            <AdminApp/>
         </div>
     );
 }
