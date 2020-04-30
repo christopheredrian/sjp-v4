@@ -1,5 +1,6 @@
 import React from "react";
 import * as Icon from 'react-feather';
+import AdminDashboard from "../dashboard/AdminDashboard";
 
 const AdminSideBar = ({showSideNav = true}) => {
 
@@ -7,7 +8,7 @@ const AdminSideBar = ({showSideNav = true}) => {
         <div id="layoutSidenav">
 
             <div id="layoutSidenav_nav">
-                <nav className="sidenav shadow-right sidenav-light">
+                <nav className="sidenav shadow-right sidenav-dark">
 
                     <div className="sidenav-menu">
                         <div className="nav accordion" id="accordionSidenav">
@@ -45,45 +46,16 @@ const AdminSideBar = ({showSideNav = true}) => {
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    <div className="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary">
-                        <div className="container-fluid">
-                            <div className="page-header-content">
-                                <h1 className="page-header-title">
-                                    <div className="page-header-icon"><i data-feather="activity"></i></div>
-                                    <span>Dashboard</span>
-                                </h1>
-                                <div className="page-header-subtitle">
-                                    San Jose Seminary
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="container-fluid mt-n10">
+                    <div className="container-fluid mt-3">
                         <div className="row">
-                            <div className="col-md-6">
-                                <div className="card mb-4">
-                                    <div className="card-header">Area Chart Example</div>
-                                    <div className="card-body">
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="card mb-4">
-                                    <div className="card-header">Bar Chart Example</div>
-                                    <div className="card-body">
-                                    </div>
-                                </div>
-                            </div>
+                            <AdminDashboard/>
                         </div>
-
-
                     </div>
                 </main>
                 <footer className="footer mt-auto footer-light">
                     <div className="container-fluid">
                         <div className="row">
-                            <div className="col-md-6 small">Copyright &copy; Your Website 2020</div>
+                            <div className="col-md-6 small">Copyright &copy; SJP 2020</div>
                             <div className="col-md-6 text-md-right small">
                                 <a href="#!">Privacy Policy</a>
                                 &middot;

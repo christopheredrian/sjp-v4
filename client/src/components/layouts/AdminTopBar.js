@@ -5,10 +5,10 @@ const AdminTopBar = ({toggleShowSidebar}) => {
 
 
     return (
-        <nav className="topnav navbar navbar-expand shadow navbar-light bg-white" id="sidenavAccordion">
+        <nav className="topnav navbar navbar-expand shadow navbar-dark bg-dark" id="sidenavAccordion">
             <a className="navbar-brand d-none d-sm-block" href="index.html">SJP-V4</a>
             <button
-                className="btn btn-icon btn-transparent-dark order-1 order-lg-0 mr-lg-2"
+                className="btn btn-icon btn-transparent-light order-1 order-lg-0 mr-lg-2"
                 id="sidebarToggle"
                 href="#"
                 onClick={toggleShowSidebar}
@@ -67,7 +67,7 @@ const AdminTopBar = ({toggleShowSidebar}) => {
                     </div>
                 </li>
                 <li className="nav-item dropdown no-caret mr-3 dropdown-notifications">
-                    <a className="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownAlerts"
+                    <a className="btn btn-icon btn-transparent-light dropdown-toggle" id="navbarDropdownAlerts"
                        href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true"
                        aria-expanded="false">
                         <Icon.Bell/>
@@ -122,7 +122,7 @@ const AdminTopBar = ({toggleShowSidebar}) => {
                     </div>
                 </li>
                 <li className="nav-item dropdown no-caret mr-3 dropdown-notifications">
-                    <a className="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownMessages"
+                    <a className="btn btn-icon btn-transparent-light dropdown-toggle" id="navbarDropdownMessages"
                        href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true"
                        aria-expanded="false">
                         <Icon.Mail/>
@@ -165,7 +165,7 @@ const AdminTopBar = ({toggleShowSidebar}) => {
                     </div>
                 </li>
                 <li className="nav-item dropdown no-caret mr-3 dropdown-user">
-                    <a className="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage"
+                    <a className="btn btn-icon btn-transparent-light dropdown-toggle" id="navbarDropdownUserImage"
                        href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true"
                        aria-expanded="false"><img className="img-fluid"
                                                   src="https://source.unsplash.com/QAB-WJcbgJk/60x60"/></a>
